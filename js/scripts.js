@@ -52,3 +52,24 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function GenerateQrCode() {
+    var userData = document.getElementById("qrData").value; //Reading the textbox value
+  
+    var qrCode = new QRCode(document.getElementById("qrcode")); //Initializing the library
+  
+    qrCode.makeCode(userData); //Code to generate qr code
+ }
+
+ function DownloadQrCode() {
+    var container = document.getElementById("qrcode");
+    html2canvas(container, { allowTaint: true }).then(function (canvas) {
+  
+    var link = document.createElement("a");
+    document.body.appendChild(link);
+    link.download = "html_image.jpg";
+    link.href = canvas.toDataURL();
+    link.target = '_blank';
+    link.click();
+  });
+ }
