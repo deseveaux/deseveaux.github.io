@@ -53,7 +53,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+//Qrcode 
+
 function GenerateQrCode() {
+
     var userData = document.getElementById("qrData").value; //Reading the textbox value
   
     var qrCode = new QRCode(document.getElementById("qrcode")); //Initializing the library
@@ -73,3 +76,10 @@ function GenerateQrCode() {
     link.click();
   });
  }
+
+ function toggleQRCode() {
+    var img = document.getElementById("qr_code");
+    if (img.style.display === "block") {
+      img.style.display = "none";
+    }
+  }

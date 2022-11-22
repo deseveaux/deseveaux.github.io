@@ -38,19 +38,19 @@
             <h1 class="masthead-heading text-uppercase mb-0">Website under construction</h1>
         </header>
         <!-- Portfolio Section-->
-        <div class="text-center">
-
-            <br /><br />
-            <input type="text" id="qrData" />
-
-            <br /><br />
-    
-                <input type="button" value="Generate" onclick="GenerateQrCode()" />
-                <input type="button" value="Download" onclick="DownloadQrCode()" />
-    
-            <br /><br />
-                    <div style="margin-left:33%;" id="qrcode"></div><!--Display QR Code in this div-->
-            <br /><br />
+        <div class="row justify-content-sm-center">
+            <div class="col-md-6 col-lg-4 p-3 my-auto">
+                <div class="p-3 text-center">
+                    <input type="text" id="qrData" value="https://deseveaux.github.io/">
+                </div>
+                <div class="p-3 text-center">
+                    <input type="button" value="Generate" onclick="toggleQRCode(),GenerateQrCode()" />
+                    <input type="button" value="Download" onclick="DownloadQrCode()" />    
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 p-3">
+                <img id='qr_code' class="mx-auto" style='display: block;' src="assets/img/qrcode/download.png">
+                <div id="qrcode"  class="mx-auto" style="width : 50%"></div><!--Display QR Code in this div-->
         </div>
         <!-- About Section-->
         
