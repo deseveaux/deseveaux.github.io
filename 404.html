@@ -1,0 +1,116 @@
+  <!DOCTYPE html>
+  <html lang="en">
+      <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <meta name="description" content="" />
+          <meta name="author" content="" />
+          <title>DSVX</title>
+          <!-- Favicon-->
+          <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+          <!-- Font Awesome icons (free version)-->
+          <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+          <!-- Google fonts-->
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+          <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+          <!-- Core theme CSS (includes Bootstrap)-->
+          <link href="css/styles.css" rel="stylesheet" />
+      </head>
+      <body id="page-top">
+          <!-- Navigation-->
+          <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+              <div class="container">
+                  <a class="navbar-brand" href="./index.html">DSVX</a>
+                  <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                      Menu
+                      <svg class="svg-inline--fa fa-bars" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"></path></svg><!-- <i class="fas fa-bars"></i> Font Awesome fontawesome.com -->
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                      <ul class="navbar-nav ms-auto">
+                          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./qrcode.html">QR code</a></li>
+                           <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./about.html">About</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+          <!-- Masthead-->
+          <div class="error-404-body">
+            <div class="error-404-text">
+                <div>ERROR</div>
+                    <h1>404</h1>
+                    <hr>
+                <div>Page Not Found</div>
+            </div>
+          </div>
+          <div class="astronaut">
+            <img src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png" alt="" class="src">
+          </div>
+          <!-- Footer-->
+          <footer class="footer text-center">
+              <div class="container">
+                  <div class="row">
+                      <!-- Footer Location-->
+                      <div class="col-lg-4 mb-5 mb-lg-0">
+                          <h4 class="text-uppercase mb-4">Location</h4>
+                          <p class="lead mb-0">
+                              2215 John Daniel Drive
+                              <br />
+                              Clark, MO 65243
+                          </p>
+                      </div>
+                      <!-- Footer Social Icons-->
+                      <div class="col-lg-4 mb-5 mb-lg-0">
+                          <h4 class="text-uppercase mb-4">Around the Web</h4>
+                          <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                          <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                          <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                          <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                      </div>
+                      <!-- Footer About Text-->
+                      <div class="col-lg-4">
+                          <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                          <p class="lead mb-0">
+                              Freelance is a free to use, MIT licensed Bootstrap theme created by
+                              <a href="http://startbootstrap.com">Start Bootstrap</a>
+                              .
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </footer>
+          <!-- Copyright Section-->
+          <div class="copyright py-4 text-center text-white">
+              <div class="container"><small>Copyright &copy; Your Website 2022</small></div>
+          </div>
+          <!-- Bootstrap core JS-->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+          <!-- Core theme JS-->
+          <script src="js/scripts.js"></script>
+          <script>document.addEventListener("DOMContentLoaded",function(){
+  
+            var body=document.body;
+             setInterval(createStar,100);
+             function createStar(){
+               var right=Math.random()*500;
+               var top=Math.random()*screen.height;
+               var star=document.createElement("div");
+            star.classList.add("star")
+             body.appendChild(star);
+             setInterval(runStar,10);
+               star.style.top=top+"px";
+             function runStar(){
+               if(right>=screen.width){
+                 star.remove();
+               }
+               right+=3;
+               star.style.right=right+"px";
+             }
+             } 
+           })</script>
+          <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+          <!-- * *                               SB Forms JS                               * *-->
+          <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+          <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+          <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+      </body>
+  </html>
