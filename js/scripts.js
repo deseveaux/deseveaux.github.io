@@ -72,32 +72,34 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 //Qrcode 
+let qrCodeInstance = null;
 
-function GenerateQrCode() {
+function generateQrCode() {
+    const userData = document.getElementById("qrData").value;
+    const container = document.getElementById("qrcode");
 
-    var userData = document.getElementById("qrData").value; //Reading the textbox value
-  
-    var qrCode = new QRCode(document.getElementById("qrcode")); //Initializing the library
-  
-    qrCode.makeCode(userData); //Code to generate qr code
- }
+    if (qrCodeInstance) {
+        qrCodeInstance.clear();
+    } else {
+        document.getElementById("qrCodeImage").style.display = "none"; //remove first qrcode
+        qrCodeInstance = new QRCode(container, {
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+        });
+        document.getElementById("qrcode").style.display = "block";
+    }
+    qrCodeInstance.makeCode(userData);
+}
 
- function DownloadQrCode() {
+function downloadQrCode() {
     var container = document.getElementById("qrcode");
     html2canvas(container, { allowTaint: true }).then(function (canvas) {
-  
-    var link = document.createElement("a");
-    document.body.appendChild(link);
-    link.download = "html_image.jpg";
-    link.href = canvas.toDataURL();
-    link.target = '_blank';
-    link.click();
-  });
- }
 
- function toggleQRCode() {
-    var img = document.getElementById("qr_code");
-    if (img.style.display === "block") {
-      img.style.display = "none";
-    }
-  }
+        var link = document.createElement("a");
+        document.body.appendChild(link);
+        link.download = "html_image.jpg";
+        link.href = canvas.toDataURL();
+        link.target = '_blank';
+        link.click();
+    });
+}

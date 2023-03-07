@@ -35,7 +35,7 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
-            <h1 class="masthead-heading text-uppercase mb-0">Website under construction</h1>
+            <h3 class="masthead-subheading text-uppercase mb-0">Simple QR Code Generator</h3>
         </header>
         <!-- Portfolio Section-->
         <div class="row justify-content-sm-center">
@@ -44,20 +44,24 @@
                     <input type="text" id="qrData">
                 </div>
                 <div class="p-3 text-center">
-                    <input type="button" value="Generate" onclick="toggleQRCode(),GenerateQrCode()" />
-                    <input type="button" value="Download" onclick="DownloadQrCode()" />    
+                    <input type="button" value="Generate" onclick="generateQrCode()" />
+                    <input type="button" value="Download" onclick="downloadQrCode()" />    
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 p-3">
-                <img id='qr_code' class="mx-auto" style='display: block;' src="assets/img/qrcode/download.png">
-                <div id="qrcode"  class="mx-auto" style="width : 50%"></div><!--Display QR Code in this div-->
+                <div class="mx-auto" style="width: 50%;">
+                    <img id="qrCodeImage" class="mx-auto" style="display: block;" src="assets/img/qrcode/download.png">
+                    <div id="qrcode" class="mx-auto" style="display: none;"></div><!--Display QR Code in this div-->
+                </div>
+            </div>
         </div>
+        
         <!-- About Section-->
         
         <!-- Contact Section-->
         
-        <!-- Footer-->
-        <footer class="footer text-center">
+          <!-- Footer-->
+          <footer class="footer text-center">
             <div class="container">
                 <div class="row">
                     <!-- Footer Location-->
@@ -80,19 +84,16 @@
                     </div>
                 </div>
             </div>
-        </footer>
-
+        </footer>          <!-- Copyright Section-->
+          <div class="bg-primary py-4 text-center text-white">
+              <div class="container"><small>Copyright &copy; Benjamin Déséveaux 2023</small></div>
+          </div>
         <script src="js/qrcode.min.js"></script>
         <script src=”http://html2canvas.hertzen.com/dist/html2canvas.js”></script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    
     </body>
 </html>
