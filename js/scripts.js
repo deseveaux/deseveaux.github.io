@@ -81,7 +81,7 @@ function downloadQrCode() {
             link.click();
         });
     } else {
-        html2canvas(document.getElementById('qrCodeImage'))
+        html2canvas(document.getElementById('qrCodeImage').getElementsByTagName('img')[0])
         .then((canvas) => {
             let link = document.createElement("a");
             link.download = 'qrcode.png';
