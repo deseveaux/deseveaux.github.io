@@ -6,8 +6,6 @@
 //
 // Scripts
 // 
-importScripts(URL="http://html2canvas.hertzen.com/dist/html2canvas.js”)
-importScripts()
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -73,16 +71,22 @@ function generateQrCode() {
     qrCodeInstance.makeCode(userData);
 }
 
-
 function downloadQrCode() {
-    var container = document.getElementById("qrcode");
-    html2canvas(container, { allowTaint: true }).then(function (canvas) {
-  
-    var link = document.createElement("a");
-    document.body.appendChild(link);
-    link.download = "html_image.jpg";
-    link.href = canvas.toDataURL();
-    link.target = '_blank';
-    link.click();
-  });
- }
+    if (qrCodeInstance) {
+        html2canvas(document.getElementById('qrcode'))
+        .then((canvas) => {
+            let link = document.createElement("a");
+            link.download = 'qrcode.png';
+            link.href = canvas.toDataURL("assets/img/qrcode/download.png");;
+            link.click();
+        });
+    } else {
+        html2canvas(document.getElementById('qrCodeImage'))
+        .then((canvas) => {
+            let link = document.createElement("a");
+            link.download = 'qrcode.png';
+            link.href = canvas.toDataURL("assets/img/qrcode/download.png");;
+            link.click();
+        });
+    }
+}
