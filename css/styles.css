@@ -11512,3 +11512,12 @@ html {
 }
 
 
+.cv-arrow-body {
+  height: 200px;
+  width: 25px;
+  background-color: #555;
+}
+
+.mxgraph {
+  position: center;
+}
