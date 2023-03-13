@@ -3088,6 +3088,37 @@ textarea.form-control-lg {
   background-color: #2c3e50;
   border-color: #2c3e50;
 }
+.date-btn-about {
+  color: #fff;
+  background-color: #a3d1fe;
+  border-color: #ff0000;
+  height: 7.69230769230769%;
+  width: 100%;
+}
+.date-btn-about:hover {
+  color: #fff;
+  background-color: #253544;
+  border-color: #233240;
+}
+.btn-check:focus + .date-btn-about, .date-btn-about:focus {
+  color: #fff;
+  background-color: #253544;
+  border-color: #233240;
+  box-shadow: 0 0 0 0.25rem rgba(76, 91, 106, 0.5);
+}
+.btn-check:checked + .date-btn-about, .btn-check:active + .date-btn-about, .date-btn-about:active, .date-btn-about.active, .show > .date-btn-about.dropdown-toggle {
+  color: #fff;
+  background-color: #233240;
+  border-color: #212f3c;
+}
+.btn-check:checked + .date-btn-about:focus, .btn-check:active + .date-btn-about:focus, .date-btn-about:active:focus, .date-btn-about.active:focus, .show > .date-btn-about.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(76, 91, 106, 0.5);
+}
+.date-btn-about:disabled, .date-btn-about.disabled {
+  color: #fff;
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+}
 
 .btn-success {
   color: #fff;
@@ -11520,4 +11551,12 @@ html {
 
 .mxgraph {
   position: center;
+}
+
+.btn-event {
+  color: #fff;
+  background-color: #a3d1fe;
+  border-color: #ff0000;
+  width: 100%;
+  padding: 0.25rem 0.25rem;
 }
