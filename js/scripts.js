@@ -106,15 +106,40 @@ function downloadQrCode() {
 
 //About page
 
-var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  return new bootstrap.Popover(popoverTriggerEl)
-})
-
 function overlayAboutPageOn(id) {
     document.getElementById(id).style.display = "block";
   }
   
 function overlayAboutPageOff(id) {
-document.getElementById(id).style.display = "none";
+    document.getElementById(id).style.display = "none";
+}
+
+let filteringActive = false;
+let oldYear = null;
+function callFilteringYearAboutPage(year) {
+    if (oldYear == year && filteringActive) {
+        let listLifeEvent = document.getElementsByName("life-event")
+        for (let i = 0; i < listLifeEvent.length; i++) {
+            var LifeEvent = listLifeEvent[i];
+            LifeEvent.style.display = "block";      
+        }
+        filteringActive = false;
+    } else {
+        FilteringYearAboutPage(year)
+        filteringActive = true;
+    }
+    oldYear = year;
+}
+
+function FilteringYearAboutPage(year) {
+    let listLifeEvent = document.getElementsByName("life-event")
+    for (let i = 0; i < listLifeEvent.length; i++) { 
+        var LifeEvent = listLifeEvent[i];
+        if (LifeEvent.getAttribute("data-year").includes(year)) {
+            LifeEvent.style.display = "block";
+        } else {
+            if (LifeEvent.style.display = "block")
+            LifeEvent.style.display = "none";
+        }
+    }
 }
