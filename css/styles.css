@@ -3090,8 +3090,8 @@ textarea.form-control-lg {
 }
 .date-btn-about {
   color: #fff;
-  background-color: #a3d1fe;
-  border-color: #ff0000;
+  background-color: #4D80A8;
+  border-color: #4D80A8;
   height: 7.69230769230769%;
   width: 100%;
 }
@@ -7839,7 +7839,7 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #0B0C08 !important;
 }
 
 .bg-secondary {
@@ -11555,10 +11555,10 @@ html {
 
 .btn-event {
   display: block;
-  color: #fff;
+  color: #000;
   position:relative;
-  background-color: #a3d1fe;
-  border-color: #ff0000;
+  background-color: #c7e8f3;
+  border-color: #4D80A8;
   width: 100%;
   padding: 0.25rem 0.25rem;
 }
