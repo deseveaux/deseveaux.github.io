@@ -11565,8 +11565,7 @@ html {
 .btn-overlay {
   position: relative;
   width: 50%;
-  top : 50%
-
+  top : 50%;
 }
 .overlay-about {
   position: absolute;
